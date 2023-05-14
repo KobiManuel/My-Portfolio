@@ -1,8 +1,12 @@
 import React from 'react'
+import './_Main.scss'
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <div>
+        <p>Kobi</p>
+        <p>Manuel</p>
+    </div>
   )
 }
 

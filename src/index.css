@@ -1,6 +1,10 @@
+@import url("https://fonts.cdnfonts.com/css/keystone-2");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #00231a ;
+  background-color: #00231a;
+  font-family: "Keystone", sans-serif;
+  font-family: "Keystone Outline", sans-serif;
 }
