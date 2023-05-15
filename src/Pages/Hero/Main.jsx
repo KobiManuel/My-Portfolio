@@ -8,6 +8,10 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+        const heroNode = heroRef.current;
+    const cardNode1 = cardRef1.current;
+    const cardNode2 = cardRef2.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -15,14 +19,14 @@ const Hero = () => {
       { threshold: 0.5 }
     );
 
-    observer.observe(heroRef.current);
-    observer.observe(cardRef1.current);
-    observer.observe(cardRef2.current);
+    observer.observe(heroNode);
+    observer.observe(cardNode1);
+    observer.observe(cardNode2);
 
     return () => {
-      observer.unobserve(heroRef.current);
-      observer.unobserve(cardRef1.current);
-      observer.unobserve(cardRef2.current);
+      observer.unobserve(heroNode);
+      observer.unobserve(cardNode1);
+      observer.unobserve(cardNode2);
     };
   }, [isVisible]);
 

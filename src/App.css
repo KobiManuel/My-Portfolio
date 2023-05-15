@@ -9,6 +9,11 @@
     height: 100vh;
     overflow-x: hidden;
     position: relative;
+    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+.App::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 .App::before {
   content: '';
@@ -19,3 +24,58 @@
   left: 0;
   z-index: -1;
 }
+.fixed {
+  position: fixed;
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding-left: 30px;
+  justify-content: center;
+  cursor: pointer;
+  left: 0;
+}
+.fixed div {
+  transform: rotate(90deg);
+  display: flex;
+  gap: 6px;
+  position: relative;
+  left: -75px;
+  top: 70px;
+font-family: "VW Headline Book", sans-serif;
+}
+.fixed div p {
+   font-family: "VW Headline Book", sans-serif;
+   letter-spacing: 5px; 
+   font-weight: 500;
+}
+.fixed span {
+    width: 24px;
+    background-color: white;
+    height: 5px;
+    cursor: pointer;
+    z-index: -1;
+    border-radius: 6px;
+}
+
+
+.page-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  /* height: calc(100% - 12px); Subtract the height of the fixed container */
+   scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  z-index: 100;
+}
+.page-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+.page {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+/* .page.active {
+  background-color: lightgray;
+} */
