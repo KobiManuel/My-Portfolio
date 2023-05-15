@@ -5,7 +5,8 @@ import Hero from './Pages/Hero/Main';
 function App() {
   return (
     <div className="App">
-       <Hero />
+      <Hero />
+      <Hero />
     </div>
   );
 }
