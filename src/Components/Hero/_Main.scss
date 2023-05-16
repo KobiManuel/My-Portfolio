@@ -12,6 +12,8 @@
   align-self: center;
   position: relative;
   overflow-x: hidden !important;
+    scroll-snap-align: start;
+    overflow: hidden;
   
   .project-card {
     opacity: 0;

@@ -8,6 +8,7 @@ const ProjectCard = ({ title1, title2, description, Image, hoverColor }) => {
   const cardRef2 = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   const buttonStyle = {
     backgroundColor: isHovered && hoverColor
@@ -64,14 +65,23 @@ const ProjectCard = ({ title1, title2, description, Image, hoverColor }) => {
           isVisible ? "visible blue-bg" : ""
         } animate-from-right`}
         ref={cardRef2}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
       >
         <img
           src={Image}
-          className={`image ${
-            isVisible ? "visible" : ""
-          } animate-to-right`}
+          className={`image ${isVisible ? "visible" : ""} animate-to-right`}
           alt="project background"
         />
+        {hovered && ( <>
+<div className="ripple-1"></div>
+        <div className="ripple-2"></div>
+        <div className="ripple-3"></div>
+        <div className="ripple-4"></div>
+        <div className="ripple-5"></div>
+        </>
+        )}
+        
       </div>
     </div>
   );

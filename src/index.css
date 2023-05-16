@@ -23,7 +23,7 @@
   }
 }
 
-@keyframes slide-in-right {
+@keyframes slide-in-top {
   from {
     transform: translateY(100%);
   }
@@ -31,6 +31,17 @@
     transform: translateY(0);
   }
 }
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
 
 @keyframes red-light-animation {
   0% {
@@ -50,5 +61,16 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes ripple{
+  0%{
+    transform: translate3d(-50%, 50%, 0) scale(0);
+    opacity: .33;
+  }
+  100%{
+    transform: translate3d(-50%, 50%, 0) scale(2000);
+    opacity: 0;
   }
 }

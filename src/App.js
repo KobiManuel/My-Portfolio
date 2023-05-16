@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import MainPage from "./Pages/MainPage/Main";
 // import Hero from "./Pages/Hero/Main";
@@ -7,7 +7,7 @@ import MainPage from "./Pages/MainPage/Main";
 
 function App() {
   const containerRef = useRef(null);
-  // const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   // const pageComponents = [<Hero />, <ProjectCard
   //   title1= "A.I &"
   //   title2= "Developer Tools"
@@ -56,7 +56,24 @@ function App() {
 
   return (
     <div ref={containerRef} className="App">
+      <div className="fixed">
+        {Array.from(Array(4).keys()).map((index) => (
+          <span
+            key={index}
+            style={{
+              width: activeIndex === index ? "48px" : "24px",
+            }}
+          ></span>
+        ))}
+        <div style={{ width: "fit-content", height: "fit-content" }}>
+          <p>Scroll </p>
+          <p></p>
+          <p> down</p>
+          <p>→</p>
+        </div>
+      </div>
       <MainPage />
+
       {/* <div className="fixed">
         {pageComponents.map((component, index) => (
           <span
