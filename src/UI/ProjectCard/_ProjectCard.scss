@@ -12,8 +12,7 @@
   align-self: center;
   position: relative;
   overflow-x: hidden !important;
-  
-  
+
   .project-card {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -21,20 +20,20 @@
     &.visible {
       opacity: 1;
 
-    &.animate-from-left {
-      animation: slide-in-left 1s ease-in-out;
-    }
+      &.animate-from-left {
+        animation: slide-in-left 1s ease-in-out;
+      }
 
-    &.animate-from-right {
-      animation: slide-in-right 1s ease-in-out;
+      &.animate-from-right {
+        animation: slide-in-right 1s ease-in-out;
+      }
     }
-}
   }
 
-  
   .project-card:first-child {
     position: absolute;
     left: 0;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     gap: 42px;
@@ -64,10 +63,10 @@
         background-color: var(--secondary);
       }
     }
-      p {
-        font-family: "VW Headline Book", sans-serif;
-        font-size: 28px;
-      }
+    p {
+      font-family: "VW Headline Book", sans-serif;
+      font-size: 28px;
+    }
 
     h3 {
       font-size: 5rem;
@@ -76,50 +75,70 @@
       text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
       color: white;
       text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-a {
-    font-family: "VW Headline Book", sans-serif;
-    cursor: pointer;
-    width: 150px;
-    padding: 12px 0;
-    outline: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 600px;
-    background-color: var(--secondary);
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.7s linear;
-    border-radius: 10px;
-    &:hover {
-        transform: translateY(-5px);
+      letter-spacing: 0.1em;
     }
-}
-
+    a {
+      font-family: "VW Headline Book", sans-serif;
+      cursor: pointer;
+      width: 150px;
+      padding: 12px 0;
+      outline: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 600px;
+      background-color: var(--secondary);
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.7s linear;
+      border-radius: 10px;
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
   }
 
   .project-card:nth-child(2) {
     background-color: transparent;
+    position: relative;
     width: 80%;
     height: 75%;
     display: flex;
-      justify-content: center;
-      align-items: center;
+    justify-content: center;
+    align-items: center;
     // background-image: url(../../assets/light2.png);
     // background-size: cover;
     // background-repeat: no-repeat;
     // background-position: center;
     img {
-       height: 400px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+        position: absolute;
+        left: 0;
+      height: 400px;
+      width: 0;
+      height: 100%;
+      object-fit: cover;
+      &.visible {
+        width: 100%;
+        &.animate-to-right {
+          animation: unroll-animation 1s linear forwards;
+        }
+      }
     }
   }
- 
+
+  .project-card:nth-child(2).blue-bg {
+    background-color: var(--primary) !important;
+  }
+
+  .project-card:nth-child(2).blue-bg::before {
+    content: "";
+    position: absolute;
+    left: 0; /* Adjusted to match the width of the red light */
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(to right, #00231a , #ee5258);
+    animation: red-light-animation 1s linear forwards;
+  }
 }
- 

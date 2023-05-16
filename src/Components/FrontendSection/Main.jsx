@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectCard from '../../UI/ProjectCard/ProjectCard';
-import banner from './images/banner.jpg';
+import banner from './images/banner3.jpg';
 
 const FrontendSection = () => {
   return (

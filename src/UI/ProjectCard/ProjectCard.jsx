@@ -61,11 +61,17 @@ const ProjectCard = ({ title1, title2, description, Image, hoverColor }) => {
       </div>
       <div
         className={`project-card ${
-          isVisible ? "visible" : ""
+          isVisible ? "visible blue-bg" : ""
         } animate-from-right`}
         ref={cardRef2}
       >
-        <img src={Image} alt="project background" />
+        <img
+          src={Image}
+          className={`image ${
+            isVisible ? "visible" : ""
+          } animate-to-right`}
+          alt="project background"
+        />
       </div>
     </div>
   );
