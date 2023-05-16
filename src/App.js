@@ -1,11 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import Hero from "./Pages/Hero/Main";
+import ProjectCard from "./UI/ProjectCard/ProjectCard";
+import developer from "./assets/developer.png";
 
 function App() {
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const pageComponents = [<Hero />, <Hero />, <Hero />, <Hero />];
+  const pageComponents = [<Hero />, <ProjectCard
+    title1= "A.I &"
+    title2= "Developer Tools"
+    description= "Fullstack development"
+    Image={developer}
+  />, <Hero />, <Hero />];
 
   useEffect(() => {
     const container = containerRef.current;
@@ -28,42 +35,41 @@ function App() {
     };
   }, []);
 
-  const handleScroll = () => {
-    const container = containerRef.current;
-    const scrollTop = container.scrollTop;
-    const componentHeight = container.clientHeight;
+  // const handleScroll = () => {
+  //   const container = containerRef.current;
+  //   const scrollTop = container.scrollTop;
+  //   const componentHeight = container.clientHeight;
 
-    const index = Math.floor(scrollTop / componentHeight);
-    setActiveIndex(index);
-  };
+  //   const index = Math.floor(scrollTop / componentHeight);
+  //   setActiveIndex(index);
+  // };
 
  const handleClick = (index) => {
-   const container = containerRef.current;
-   const componentOffsetTop = container.clientHeight * (index);
-   container.scrollTo({
-     top: componentOffsetTop,
-     behavior: "smooth",
-   });
-   setActiveIndex(index);
- };
+  console.log(index);
+  const targetComponent = containerRef.current.querySelectorAll('.page')[index];
+  targetComponent.scrollIntoView({ behavior: "smooth", block: "start" });
+  setActiveIndex(index);
+  console.log(activeIndex)
+};
+
 
   return (
-    <div ref={containerRef} className="App" onScroll={handleScroll}>
+    <div ref={containerRef} className="App">
       <div className="fixed">
         {pageComponents.map((component, index) => (
           <span
             key={index}
             onClick={() => handleClick(index)}
             style={{
-              width: activeIndex === index ? "48px" : "24px",
+              width: activeIndex === index ? "48px" : "24px"
             }}
           ></span>
         ))}
-        <div style={{width:"fit-content", height:"fit-content"}}>
-        <p>Scroll </p>
-        <p></p>
-        <p> down</p>
-        <p>→</p>
+        <div style={{ width: "fit-content", height: "fit-content" }}>
+          <p>Scroll </p>
+          <p></p>
+          <p> down</p>
+          <p>→</p>
         </div>
       </div>
       <div className="page-container">

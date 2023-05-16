@@ -63,6 +63,7 @@ font-family: "VW Headline Book", sans-serif;
 .page-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  height: 100vh;
   /* height: calc(100% - 12px); Subtract the height of the fixed container */
    scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer and Edge */
