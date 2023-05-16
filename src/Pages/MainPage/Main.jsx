@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from '../../Components/Hero/Main'
 
 const MainPage = () => {
   return (
-    <div>MainPage</div>
+    <>
+    <Hero />
+    </>
   )
 }
 

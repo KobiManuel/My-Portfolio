@@ -1,18 +1,18 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./App.css";
-import Hero from "./Pages/Hero/Main";
-import ProjectCard from "./UI/ProjectCard/ProjectCard";
-import developer from "./assets/developer.png";
+// import Hero from "./Pages/Hero/Main";
+// import ProjectCard from "./UI/ProjectCard/ProjectCard";
+// import developer from "./assets/developer.png";
 
 function App() {
   const containerRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const pageComponents = [<Hero />, <ProjectCard
-    title1= "A.I &"
-    title2= "Developer Tools"
-    description= "Fullstack development"
-    Image={developer}
-  />, <Hero />, <Hero />];
+  // const [activeIndex, setActiveIndex] = useState(0);
+  // const pageComponents = [<Hero />, <ProjectCard
+  //   title1= "A.I &"
+  //   title2= "Developer Tools"
+  //   description= "Fullstack development"
+  //   Image={developer}
+  // />, <Hero />, <Hero />];
 
   useEffect(() => {
     const container = containerRef.current;
@@ -44,18 +44,18 @@ function App() {
   //   setActiveIndex(index);
   // };
 
- const handleClick = (index) => {
-  console.log(index);
-  const targetComponent = containerRef.current.querySelectorAll('.page')[index];
-  targetComponent.scrollIntoView({ behavior: "smooth", block: "start" });
-  setActiveIndex(index);
-  console.log(activeIndex)
-};
+//  const handleClick = (index) => {
+//   console.log(index);
+//   const targetComponent = containerRef.current.querySelectorAll('.page')[index];
+//   targetComponent.scrollIntoView({ behavior: "smooth", block: "start" });
+//   setActiveIndex(index);
+//   console.log(activeIndex)
+// };
 
 
   return (
     <div ref={containerRef} className="App">
-      <div className="fixed">
+      {/* <div className="fixed">
         {pageComponents.map((component, index) => (
           <span
             key={index}
@@ -78,7 +78,7 @@ function App() {
             {component}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
