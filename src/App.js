@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./App.css";
+import MainPage from "./Pages/MainPage/Main";
 // import Hero from "./Pages/Hero/Main";
 // import ProjectCard from "./UI/ProjectCard/ProjectCard";
 // import developer from "./assets/developer.png";
@@ -55,6 +56,7 @@ function App() {
 
   return (
     <div ref={containerRef} className="App">
+      <MainPage />
       {/* <div className="fixed">
         {pageComponents.map((component, index) => (
           <span

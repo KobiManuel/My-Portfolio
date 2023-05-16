@@ -31,7 +31,7 @@ const Hero = () => {
   }, [isVisible]);
 
   return (
-    <div className="hero" ref={heroRef}>
+    <section className="hero" ref={heroRef}>
       <div
         className={`project-card ${
           isVisible ? "visible" : ""
@@ -51,7 +51,7 @@ const Hero = () => {
       >
         <h6>Portfolio</h6>
       </div>
-    </div>
+    </section>
   );
 };
 
