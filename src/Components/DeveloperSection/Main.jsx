@@ -6,10 +6,11 @@ const DeveloperSection = () => {
   return (
     <div>
       <ProjectCard
-        title1="A.I &"
-        title2="Developer Tools"
+        title1="A.I & Developer "
+        title2="Tools"
         description="Fullstack development"
         Image={developer}
+        hoverColor="#012c3a"
       />
     </div>
   );

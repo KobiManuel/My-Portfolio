@@ -1,11 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./_ProjectCard.scss";
+import { Link } from "react-router-dom";
 
-const ProjectCard = ({title1, title2, description, Image}) => {
+const ProjectCard = ({ title1, title2, description, Image, hoverColor }) => {
   const heroRef = useRef(null);
   const cardRef1 = useRef(null);
   const cardRef2 = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const buttonStyle = {
+    backgroundColor: isHovered && hoverColor
+  };
 
   useEffect(() => {
     const heroNode = heroRef.current;
@@ -38,10 +44,20 @@ const ProjectCard = ({title1, title2, description, Image}) => {
         } animate-from-left`}
         ref={cardRef1}
       >
-        <h3>{title1}</h3>
-        <h3>{title2}</h3>
+        <span>
+          <h3>{title1}</h3>
+          <h3>{title2}</h3>
+        </span>
         <span></span>
         <p>{description}</p>
+        <Link
+          to="#"
+          style={buttonStyle}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          Show Me More
+        </Link>
       </div>
       <div
         className={`project-card ${
