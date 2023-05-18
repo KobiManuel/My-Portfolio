@@ -39,7 +39,7 @@ const DesignPage = () => {
       };
     }, [setThirdCard]);
   return (
-    <div className='design-section' ref={designSectionRef}>
+    <section className='design-section' ref={designSectionRef}>
       <ProjectCard
         title1="Design & Art"
         title2="Portfolio"
@@ -47,7 +47,7 @@ const DesignPage = () => {
         Image={banner}
         hoverColor="#012c5a"
       />
-    </div>
+    </section>
   );
 }
 

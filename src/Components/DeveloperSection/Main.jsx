@@ -40,7 +40,7 @@ const DeveloperSection = () => {
   }, [setFirstCard]);
 
   return (
-    <div className="developer-section" ref={developerSectionRef}>
+    <section className="developer-section" ref={developerSectionRef}>
       <ProjectCard
         title1="A.I & Developer"
         title2="Tools"
@@ -48,7 +48,7 @@ const DeveloperSection = () => {
         Image={developer}
         hoverColor="#012c3a"
       />
-    </div>
+    </section>
   );
 };
 

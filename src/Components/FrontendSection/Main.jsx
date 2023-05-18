@@ -39,7 +39,7 @@ const FrontendSection = () => {
         };
       }, [setSecondCard]);
   return (
-    <div className='frontend-section' ref={frontendSectionRef}>
+    <section className='frontend-section' ref={frontendSectionRef}>
       <ProjectCard
         title1="Frontend Dev"
         title2="Projects"
@@ -47,7 +47,7 @@ const FrontendSection = () => {
         Image={banner}
         hoverColor="#012c5a"
       />
-    </div>
+    </section>
   );
 }
 
