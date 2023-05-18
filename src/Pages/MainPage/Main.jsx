@@ -4,6 +4,7 @@ import DeveloperSection from '../../Components/DeveloperSection/Main'
 import FrontendSection from '../../Components/FrontendSection/Main'
 import DesignPage from '../DesignPage/Main'
 import './_Main.scss';
+import AboutMe from '../../Components/AboutMe/Main'
 
 const MainPage = () => {
   return (
@@ -13,6 +14,7 @@ const MainPage = () => {
         <DeveloperSection />
         <FrontendSection />
         <DesignPage />
+        <AboutMe />
       </div>
     </div>
   );
