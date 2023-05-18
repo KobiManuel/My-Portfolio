@@ -57,6 +57,7 @@ font-family: "VW Headline Book", sans-serif;
     cursor: pointer;
     z-index: -1;
     border-radius: 6px;
+    transition: width 0.7s ease-in-out;
 }
 
 
