@@ -10,7 +10,8 @@
     overflow-x: hidden;
     position: relative;
     scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  -ms-overflow-style: none; /* Internet Explorer and Edge
+   */
 }
 .App::-webkit-scrollbar {
   display: none; /* Chrome, Safari, and Opera */
@@ -89,3 +90,8 @@ font-family: "VW Headline Book", sans-serif;
 } */
 
 
+@media screen and (max-width: 922px) {
+    .fixed {
+        display: none;
+    }
+}
