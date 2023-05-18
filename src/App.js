@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import MainPage from "./Pages/MainPage/Main";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Hero from "./Pages/Hero/Main";
 // import ProjectCard from "./UI/ProjectCard/ProjectCard";
 // import developer from "./assets/developer.png";
@@ -58,7 +59,7 @@ function App() {
     <div ref={containerRef} className="App">
       <div className="fixed">
         {Array.from(Array(4).keys()).map((index) => (
-          <span
+          <span href="#/first"
             key={index}
             style={{
               width: activeIndex === index ? "48px" : "24px",
@@ -72,8 +73,11 @@ function App() {
           <p>→</p>
         </div>
       </div>
-      <MainPage />
-
+     <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+</Routes>
+</Router>
       {/* <div className="fixed">
         {pageComponents.map((component, index) => (
           <span
@@ -98,6 +102,8 @@ function App() {
           </div>
         ))}
       </div> */}
+
+
     </div>
   );
 }
