@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import "./App.css";
 import MainPage from "./Pages/MainPage/Main";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,7 +11,7 @@ function App() {
     const { firstCard, secondCard, thirdCard, fourthCard } = useContext(PortfolioContext);
     const cardValues = [firstCard, secondCard, thirdCard, fourthCard];
   const containerRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+ 
   // const pageComponents = [<Hero />, <ProjectCard
   //   title1= "A.I &"
   //   title2= "Developer Tools"

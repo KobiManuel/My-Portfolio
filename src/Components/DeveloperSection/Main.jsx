@@ -4,7 +4,7 @@ import developer from "./images/A.I.jpg";
 import { PortfolioContext } from "../../Context/context";
 
 const DeveloperSection = () => {
-  const { firstCard, setFirstCard } = useContext(PortfolioContext);
+  const { setFirstCard } = useContext(PortfolioContext);
   const developerSectionRef = useRef(null);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const DeveloperSection = () => {
         observer.unobserve(target);
       }
     };
-  }, [firstCard]);
+  }, [setFirstCard]);
 
   return (
     <div className="developer-section" ref={developerSectionRef}>
