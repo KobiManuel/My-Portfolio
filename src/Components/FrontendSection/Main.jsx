@@ -5,7 +5,7 @@ import { PortfolioContext } from '../../Context/context';
 
 const FrontendSection = () => {
       const { setSecondCard } = useContext(PortfolioContext);
-      const developerSectionRef = useRef(null);
+      const frontendSectionRef = useRef(null);
 
       useEffect(() => {
         const observerOptions = {
@@ -26,7 +26,7 @@ const FrontendSection = () => {
           observerCallback,
           observerOptions
         );
-        const target = developerSectionRef.current;
+        const target = frontendSectionRef.current;
 
         if (target) {
           observer.observe(target);
@@ -39,7 +39,7 @@ const FrontendSection = () => {
         };
       }, [setSecondCard]);
   return (
-    <div className='frontend-section' ref={developerSectionRef}>
+    <div className='frontend-section' ref={frontendSectionRef}>
       <ProjectCard
         title1="Frontend Dev"
         title2="Projects"
