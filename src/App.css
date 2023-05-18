@@ -36,6 +36,7 @@
   cursor: pointer;
   left: 0;
   z-index: 7000;
+  
 }
 .fixed div {
   transform: rotate(90deg);
@@ -62,7 +63,9 @@ font-family: "VW Headline Book", sans-serif;
     border-radius: 6px;
     transition: width 0.7s ease-in-out;
 }
-
+/* .fixed button:hover {
+    height: 8px;
+} */
 
 .page-container {
   scroll-snap-type: y mandatory;
