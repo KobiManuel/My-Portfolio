@@ -80,9 +80,10 @@
   }
 
   .project-card:nth-child(2) {
+    position: relative;
     background-color: transparent;
     height: 400px;
-    background-color:white;
+    width: 400px;
     border-radius: 60%;
     display: flex;
       justify-content: center;
@@ -98,6 +99,16 @@
       color: #ee5258;
       background-color: transparent;
       font-weight: 900;
+       position: absolute;
+       z-index: 1000;
+    }
+    svg {
+      width: 100%;
+     transform: translate(-23px, -20px);
+   g {
+    stroke: white;
+    fill: rgba(255, 255, 255, 0.12);
+   }
     }
   }
  

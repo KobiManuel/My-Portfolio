@@ -8,8 +8,37 @@ import { PortfolioContext } from "./Context/context";
 // import developer from "./assets/developer.png";
 
 function App() {
-    const { firstCard, secondCard, thirdCard, fourthCard } = useContext(PortfolioContext);
-    const cardValues = [firstCard, secondCard, thirdCard, fourthCard];
+   const {
+    heroCard,
+     firstCard,
+     secondCard,
+     thirdCard,
+     fourthCard,
+     setFirstCard,
+     setSecondCard,
+     setThirdCard,
+     setFourthCard,
+     setHeroCard
+   } = useContext(PortfolioContext);
+   const cardValues = [heroCard, firstCard, secondCard, thirdCard, fourthCard];
+   const cardSetters = [
+    setHeroCard,
+     setFirstCard,
+     setSecondCard,
+     setThirdCard,
+     setFourthCard,
+   ];
+
+   const handleCardClick = (index) => {
+      cardSetters.forEach((setter, i) => {
+      setter(i === index);
+      })
+      const pagesContainer = containerRef.current.querySelector(".pages");
+      const component = pagesContainer.children[index];
+      if (component) {
+        component.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+   };
   const containerRef = useRef(null);
  
   // const pageComponents = [<Hero />, <ProjectCard
@@ -62,12 +91,13 @@ function App() {
     <div ref={containerRef} className="App">
       <div className="fixed">
         {cardValues.map((card, index) => (
-          <span
+          <button
             key={index}
+            onClick={() => handleCardClick(index)}
             style={{
               width: card ? "48px" : "24px",
             }}
-          ></span>
+          ></button>
         ))}
 
         <div style={{ width: "fit-content", height: "fit-content" }}>
