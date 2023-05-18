@@ -43,7 +43,7 @@ const ContactMe = () => {
     <section className="developer-section" ref={ContactMeRef}>
       <ProjectCard
         title1="Get In Touch"
-        description="emmakobi91@gmail.com"
+        showContact
         Image={developer}
         hoverColor="#012c3a"
       />

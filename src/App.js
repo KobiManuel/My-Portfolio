@@ -14,19 +14,22 @@ function App() {
      secondCard,
      thirdCard,
      fourthCard,
+     fifthCard,
      setFirstCard,
      setSecondCard,
      setThirdCard,
      setFourthCard,
-     setHeroCard
+     setHeroCard,
+     setFifthCard
    } = useContext(PortfolioContext);
-   const cardValues = [heroCard, firstCard, secondCard, thirdCard, fourthCard];
+   const cardValues = [heroCard, firstCard, secondCard, thirdCard, fourthCard, fifthCard];
    const cardSetters = [
     setHeroCard,
      setFirstCard,
      setSecondCard,
      setThirdCard,
      setFourthCard,
+     setFifthCard
    ];
 
    const handleCardClick = (index) => {
