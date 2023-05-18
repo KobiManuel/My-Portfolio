@@ -17,7 +17,7 @@ const Hero = () => {
       ([entry]) => {
         setHeroCard(entry.isIntersecting);
       },
-      { threshold: 0.8 }
+      { threshold: 0.5 }
     );
 
     observer.observe(heroNode);
@@ -29,7 +29,7 @@ const Hero = () => {
       observer.unobserve(cardNode1);
       observer.unobserve(cardNode2);
     };
-  }, [setHeroCard]);
+  }, );
 
   return (
     <section className="hero" ref={heroRef}>
