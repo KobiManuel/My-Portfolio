@@ -5,6 +5,7 @@ import FrontendSection from '../../Components/FrontendSection/Main'
 import DesignPage from '../DesignPage/Main'
 import './_Main.scss';
 import AboutMe from '../../Components/AboutMe/Main'
+import ContactMe from '../../Components/ContactMe/Main'
 
 const MainPage = () => {
   return (
@@ -15,6 +16,7 @@ const MainPage = () => {
         <FrontendSection />
         <DesignPage />
         <AboutMe />
+        <ContactMe />
       </div>
     </div>
   );
