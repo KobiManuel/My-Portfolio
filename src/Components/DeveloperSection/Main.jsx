@@ -61,6 +61,7 @@ const DeveloperSection = () => {
         height={height}
         width={width}
         position={position}
+        link={"/newpage"}
       />
     </section>
   );
