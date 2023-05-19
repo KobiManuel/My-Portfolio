@@ -9,6 +9,7 @@ const ProjectCard = ({
   Image,
   hoverColor,
   showContact,
+  link
 }) => {
   const heroRef = useRef(null);
   const cardRef1 = useRef(null);
@@ -84,7 +85,7 @@ const ProjectCard = ({
           <>
             <p>{description}</p>
             <Link
-              to="#"
+              to={link}
               style={buttonStyle}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
