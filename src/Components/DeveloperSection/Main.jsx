@@ -39,14 +39,19 @@ const DeveloperSection = () => {
     };
   }, [setFirstCard]);
 
+  const handlePageChange = () => {
+
+  }
+
   return (
-    <section className="developer-section" ref={developerSectionRef}>
+    <section className="developer-section" ref={developerSectionRef} style={{zIndex: "800000000"}}>
       <ProjectCard
         title1="A.I & Developer"
         title2="Tools"
         description="Fullstack development"
         Image={developer}
         hoverColor="#012c3a"
+        onClick={handlePageChange}
       />
     </section>
   );

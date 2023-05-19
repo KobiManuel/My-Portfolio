@@ -23,7 +23,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  /* z-index: -1; */
 }
 .fixed {
   position: fixed;
@@ -59,7 +59,7 @@
   background-color: white;
   height: 5px;
   cursor: pointer !important;
-  z-index: -1;
+  /* z-index: -1; */
   border-radius: 6px;
   transition: width 0.7s ease-in-out;
 }
@@ -74,7 +74,7 @@
   /* height: calc(100% - 12px); Subtract the height of the fixed container */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer and Edge */
-  z-index: 100;
+  /* z-index: 100; */
 }
 .page-container::-webkit-scrollbar {
   display: none; /* Chrome, Safari, and Opera */

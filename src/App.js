@@ -51,6 +51,47 @@ function App() {
   };
   const containerRef = useRef(null);
 
+
+
+  return (
+    <div ref={containerRef} className="App">
+      <div className="fixed">
+        {cardValues.map((card, index) => (
+          <button
+            key={index}
+            onClick={() => handleCardClick(index)}
+            style={{
+              width: card ? "48px" : "24px",
+            }}
+          ></button>
+        ))}
+
+        <div
+          style={{
+            width: "fit-content",
+            height: "fit-content",
+            transform: fifthCard && "rotate(90deg) translateX(150%)",
+            transition: "transform 0.7s ease",
+          }}
+        >
+          <p>Scroll </p>
+          <p></p>
+          <p> down</p>
+          <p>→</p>
+        </div>
+      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+        </Routes>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+
+
   // const pageComponents = [<Hero />, <ProjectCard
   //   title1= "A.I &"
   //   title2= "Developer Tools"
@@ -100,65 +141,3 @@ function App() {
   //   setActiveIndex(index);
   //   console.log(activeIndex)
   // };
-
-  return (
-    <div ref={containerRef} className="App">
-      <div className="fixed">
-        {cardValues.map((card, index) => (
-          <button
-            key={index}
-            onClick={() => handleCardClick(index)}
-            style={{
-              width: card ? "48px" : "24px",
-            }}
-          ></button>
-        ))}
-
-        <div
-          style={{
-            width: "fit-content",
-            height: "fit-content",
-            transform: fifthCard && "rotate(90deg) translateX(150%)",
-            transition: "transform 0.7s ease",
-          }}
-        >
-          <p>Scroll </p>
-          <p></p>
-          <p> down</p>
-          <p>→</p>
-        </div>
-      </div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-        </Routes>
-      </Router>
-      {/* <div className="fixed">
-        {pageComponents.map((component, index) => (
-          <span
-            key={index}
-            onClick={() => handleClick(index)}
-            style={{
-              width: activeIndex === index ? "48px" : "24px"
-            }}
-          ></span>
-        ))}
-        <div style={{ width: "fit-content", height: "fit-content" }}>
-          <p>Scroll </p>
-          <p></p>
-          <p> down</p>
-          <p>→</p>
-        </div>
-      </div>
-      <div className="page-container">
-        {pageComponents.map((component, index) => (
-          <div key={index} className="page">
-            {component}
-          </div>
-        ))}
-      </div> */}
-    </div>
-  );
-}
-
-export default App;
