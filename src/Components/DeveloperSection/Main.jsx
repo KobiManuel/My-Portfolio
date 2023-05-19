@@ -1,10 +1,13 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 import developer from "./images/A.I.jpg";
 import { PortfolioContext } from "../../Context/context";
 
 const DeveloperSection = () => {
   const { setFirstCard } = useContext(PortfolioContext);
+  const [height, setHeight] = useState("");
+  const [width, setWidth] = useState("");
+  const [position, setPosition] = useState("");
   const developerSectionRef = useRef(null);
 
   useEffect(() => {
@@ -40,7 +43,10 @@ const DeveloperSection = () => {
   }, [setFirstCard]);
 
   const handlePageChange = () => {
-
+    setHeight("100%");
+  setPosition("absolute");
+  setWidth("70%")
+  
   }
 
   return (
@@ -52,6 +58,9 @@ const DeveloperSection = () => {
         Image={developer}
         hoverColor="#012c3a"
         onClick={handlePageChange}
+        height={height}
+        width={width}
+        position={position}
       />
     </section>
   );

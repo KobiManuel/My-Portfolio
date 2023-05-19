@@ -14,6 +14,7 @@
   overflow-x: hidden !important;
   overflow-y: hidden !important;
   scroll-snap-align: start;
+  z-index: 1;
   
 
   .project-card {
@@ -111,6 +112,7 @@
   .project-card:nth-child(2) {
     background-color: transparent;
     position: relative;
+    right: 0;
     // position: absolute;
     // right: -100px;
     width: 80%;
@@ -118,6 +120,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // transition: all 0.2s ease;
     
     
     cursor: pointer;

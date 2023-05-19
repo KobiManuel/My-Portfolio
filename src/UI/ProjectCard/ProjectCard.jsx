@@ -10,7 +10,10 @@ const ProjectCard = ({
   hoverColor,
   showContact,
   link,
-  onClick
+  onClick,
+  position,
+  height,
+  width
 }) => {
   const heroRef = useRef(null);
   const cardRef1 = useRef(null);
@@ -101,6 +104,7 @@ const ProjectCard = ({
         className={`project-card ${
           isVisible ? "visible blue-bg" : ""
         } animate-from-right`}
+        style={{ position: position, height: height, width: width }}
         ref={cardRef2}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
