@@ -12,9 +12,9 @@
   align-self: center;
   position: relative;
   overflow-x: hidden !important;
-    scroll-snap-align: start;
-    overflow: hidden;
-  
+  scroll-snap-align: start;
+  overflow: hidden;
+
   .project-card {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -22,17 +22,16 @@
     &.visible {
       opacity: 1;
 
-    &.animate-from-left {
-      animation: slide-in-left 1s ease-in-out;
-    }
+      &.animate-from-left {
+        animation: slide-in-left 1s ease-in-out;
+      }
 
-    &.animate-from-right {
-      animation: slide-in-right 1s ease-in-out;
+      &.animate-from-right {
+        animation: slide-in-right 1s ease-in-out;
+      }
     }
-}
   }
 
-  
   .project-card:first-child {
     display: flex;
     flex-direction: column;
@@ -63,10 +62,10 @@
         background-color: var(--secondary);
       }
     }
-      p {
-        font-family: "VW Headline Book", sans-serif;
-        font-size: 28px;
-      }
+    p {
+      font-family: "VW Headline Book", sans-serif;
+      font-size: 28px;
+    }
 
     h3 {
       font-size: 7rem;
@@ -86,9 +85,9 @@
     width: 400px;
     border-radius: 60%;
     display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     // background-image: url(../../assets/light2.png);
     // background-size: cover;
     // background-repeat: no-repeat;
@@ -100,18 +99,16 @@
       color: #ee5258;
       background-color: transparent;
       font-weight: 900;
-       position: absolute;
-       z-index: 1000;
+      position: absolute;
+      z-index: 1000;
     }
     svg {
       width: 100%;
-     transform: translate(-23px, -20px);
-   g {
-    stroke: white;
-    fill: rgba(255, 255, 255, 0.12);
-   }
+      transform: translate(-23px, -20px);
+      g {
+        stroke: white;
+        fill: rgba(255, 255, 255, 0.12);
+      }
     }
   }
- 
 }
- 

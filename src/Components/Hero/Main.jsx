@@ -3,13 +3,13 @@ import "./_Main.scss";
 import { PortfolioContext } from "../../Context/context";
 
 const Hero = () => {
-   const { heroCard, setHeroCard } = useContext(PortfolioContext);
+  const { heroCard, setHeroCard } = useContext(PortfolioContext);
   const heroRef = useRef(null);
   const cardRef1 = useRef(null);
   const cardRef2 = useRef(null);
 
   useEffect(() => {
-        const heroNode = heroRef.current;
+    const heroNode = heroRef.current;
     const cardNode1 = cardRef1.current;
     const cardNode2 = cardRef2.current;
 
@@ -29,7 +29,7 @@ const Hero = () => {
       observer.unobserve(cardNode1);
       observer.unobserve(cardNode2);
     };
-  }, );
+  });
 
   return (
     <section className="hero" ref={heroRef}>
@@ -42,7 +42,7 @@ const Hero = () => {
         <h3>Kobi</h3>
         <h3>Manuel</h3>
         <span></span>
-        <p>Web developer / Visual Artist</p>
+        <p>Frontend Engineer / Visual Artist</p>
       </div>
       <div
         className={`project-card ${

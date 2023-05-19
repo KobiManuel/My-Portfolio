@@ -1,15 +1,15 @@
 .App {
-    background-color: #00231a;
-    background-image: url(./assets/bg4.png);
-    background-size: 800px;
-    background-repeat: no-repeat;
-    background-position: right;
-    width: 100vw;
-    max-width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-    scrollbar-width: none; /* Firefox */
+  background-color: #00231a;
+  background-image: url(./assets/bg4.png);
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer and Edge
    */
 }
@@ -17,7 +17,7 @@
   display: none; /* Chrome, Safari, and Opera */
 }
 .App::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -37,7 +37,6 @@
   cursor: pointer;
   left: 0;
   z-index: 7000;
-  
 }
 .fixed div {
   transform: rotate(90deg);
@@ -46,23 +45,23 @@
   position: relative;
   left: -75px;
   top: 70px;
-font-family: "VW Headline Book", sans-serif;
+  font-family: "VW Headline Book", sans-serif;
 }
 .fixed div p {
-   font-family: "VW Headline Book", sans-serif;
-   letter-spacing: 5px; 
-   font-weight: 500;
+  font-family: "VW Headline Book", sans-serif;
+  letter-spacing: 5px;
+  font-weight: 500;
 }
 .fixed button {
-    width: 24px;
-    outline: none;
-    border: none;
-    background-color: white;
-    height: 5px;
-    cursor: pointer !important;
-    z-index: -1;
-    border-radius: 6px;
-    transition: width 0.7s ease-in-out;
+  width: 24px;
+  outline: none;
+  border: none;
+  background-color: white;
+  height: 5px;
+  cursor: pointer !important;
+  z-index: -1;
+  border-radius: 6px;
+  transition: width 0.7s ease-in-out;
 }
 /* .fixed button:hover {
     height: 8px;
@@ -73,7 +72,7 @@ font-family: "VW Headline Book", sans-serif;
   overflow-y: scroll;
   height: 100vh;
   /* height: calc(100% - 12px); Subtract the height of the fixed container */
-   scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer and Edge */
   z-index: 100;
 }
@@ -89,9 +88,8 @@ font-family: "VW Headline Book", sans-serif;
   background-color: lightgray;
 } */
 
-
 @media screen and (max-width: 922px) {
-    .fixed {
-        display: none;
-    }
+  .fixed {
+    display: none;
+  }
 }

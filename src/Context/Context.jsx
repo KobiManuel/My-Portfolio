@@ -3,7 +3,7 @@ import React, { createContext, useState } from "react";
 export const PortfolioContext = createContext();
 
 export const PortfolioContextProvider = ({ children }) => {
-     const [heroCard, setHeroCard] = useState(true);
+  const [heroCard, setHeroCard] = useState(true);
   const [firstCard, setFirstCard] = useState(false);
   const [secondCard, setSecondCard] = useState(false);
   const [thirdCard, setThirdCard] = useState(false);

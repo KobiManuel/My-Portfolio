@@ -8,42 +8,49 @@ import { PortfolioContext } from "./Context/context";
 // import developer from "./assets/developer.png";
 
 function App() {
-   const {
+  const {
     heroCard,
-     firstCard,
-     secondCard,
-     thirdCard,
-     fourthCard,
-     fifthCard,
-     setFirstCard,
-     setSecondCard,
-     setThirdCard,
-     setFourthCard,
-     setHeroCard,
-     setFifthCard
-   } = useContext(PortfolioContext);
-   const cardValues = [heroCard, firstCard, secondCard, thirdCard, fourthCard, fifthCard];
-   const cardSetters = [
+    firstCard,
+    secondCard,
+    thirdCard,
+    fourthCard,
+    fifthCard,
+    setFirstCard,
+    setSecondCard,
+    setThirdCard,
+    setFourthCard,
     setHeroCard,
-     setFirstCard,
-     setSecondCard,
-     setThirdCard,
-     setFourthCard,
-     setFifthCard
-   ];
+    setFifthCard,
+  } = useContext(PortfolioContext);
+  const cardValues = [
+    heroCard,
+    firstCard,
+    secondCard,
+    thirdCard,
+    fourthCard,
+    fifthCard,
+  ];
+  const cardSetters = [
+    setHeroCard,
+    setFirstCard,
+    setSecondCard,
+    setThirdCard,
+    setFourthCard,
+    setFifthCard,
+  ];
 
-   const handleCardClick = (index) => {
-      cardSetters.forEach((setter, i) => {
+  const handleCardClick = (index) => {
+    cardSetters.forEach((setter, i) => {
       setter(i === index);
-      })
-      const pagesContainer = containerRef.current.querySelector(".pages");
-      const component = pagesContainer.children[index];
-      if (component) {
-        component.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-   };
+    });
+    const pagesContainer = containerRef.current.querySelector(".pages");
+    const component = pagesContainer.children[index];
+    if (component) {
+      component.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   const containerRef = useRef(null);
- 
+
   // const pageComponents = [<Hero />, <ProjectCard
   //   title1= "A.I &"
   //   title2= "Developer Tools"
@@ -81,14 +88,13 @@ function App() {
   //   setActiveIndex(index);
   // };
 
-//  const handleClick = (index) => {
-//   console.log(index);
-//   const targetComponent = containerRef.current.querySelectorAll('.page')[index];
-//   targetComponent.scrollIntoView({ behavior: "smooth", block: "start" });
-//   setActiveIndex(index);
-//   console.log(activeIndex)
-// };
-
+  //  const handleClick = (index) => {
+  //   console.log(index);
+  //   const targetComponent = containerRef.current.querySelectorAll('.page')[index];
+  //   targetComponent.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   setActiveIndex(index);
+  //   console.log(activeIndex)
+  // };
 
   return (
     <div ref={containerRef} className="App">
