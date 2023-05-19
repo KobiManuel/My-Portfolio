@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useRef } from "react";
 import "./App.css";
 import MainPage from "./Pages/MainPage/Main";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -58,26 +58,31 @@ function App() {
   //   Image={developer}
   // />, <Hero />, <Hero />];
 
-  useEffect(() => {
-    const container = containerRef.current;
 
-    const handleMouseMove = (event) => {
-      const { clientX, clientY } = event;
-      const offsetX = (clientX / window.innerWidth) * 5;
-      const offsetY = (clientY / window.innerHeight) * 20;
 
-      container.style.setProperty(
-        "background-position",
-        `calc(100% - ${offsetX}px) calc(50% + ${offsetY}px)`
-      );
-    };
 
-    container.addEventListener("mousemove", handleMouseMove);
 
-    return () => {
-      container.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+
+  // useEffect(() => {
+  //   const container = containerRef.current;
+
+  //   const handleMouseMove = (event) => {
+  //     const { clientX, clientY } = event;
+  //     const offsetX = (clientX / window.innerWidth) * 5;
+  //     const offsetY = (clientY / window.innerHeight) * 20;
+
+  //     container.style.setProperty(
+  //       "background-position",
+  //       `calc(100% - ${offsetX}px) calc(50% + ${offsetY}px)`
+  //     );
+  //   };
+
+  //   container.addEventListener("mousemove", handleMouseMove);
+
+  //   return () => {
+  //     container.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
 
   // const handleScroll = () => {
   //   const container = containerRef.current;
@@ -109,7 +114,14 @@ function App() {
           ></button>
         ))}
 
-        <div style={{ width: "fit-content", height: "fit-content" }}>
+        <div
+          style={{
+            width: "fit-content",
+            height: "fit-content",
+            transform: fifthCard && "rotate(90deg) translateX(150%)",
+            transition: "transform 0.7s ease",
+          }}
+        >
           <p>Scroll </p>
           <p></p>
           <p> down</p>
