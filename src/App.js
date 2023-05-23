@@ -68,13 +68,14 @@ function App() {
           style={{
             width: "fit-content",
             height: "fit-content",
-            transform: fifthCard && "rotate(90deg) translateX(150%)",
+            transform: fifthCard && "rotate(90deg) translateX(200%)",
             transition: "transform 0.7s ease",
           }}
         >
           <p>Scroll </p>
           <p></p>
           <p> down</p>
+          
           <p>→</p>
         </div>
       </div>
