@@ -80,7 +80,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<MainPage />}  />
-            <Route path="/newpage/component1" element={<Hero />} />
+            <Route path="/developerPage" element={<Hero />} />
         </Routes>
       </Router>
     </div>
