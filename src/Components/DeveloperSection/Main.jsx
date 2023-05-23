@@ -3,7 +3,7 @@ import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 import developer from "./images/A.I.jpg";
 import { PortfolioContext } from "../../Context/context";
 
-const DeveloperSection = () => {
+const DeveloperSection = ({id}) => {
   const { setFirstCard } = useContext(PortfolioContext);
   const [height, setHeight] = useState("");
   const [width, setWidth] = useState("");
@@ -46,11 +46,15 @@ const DeveloperSection = () => {
     setHeight("100%");
   setPosition("absolute");
   setWidth("70%")
-  
   }
 
   return (
-    <section className="developer-section" ref={developerSectionRef} style={{zIndex: "800000000"}}>
+    <section
+      id={id}
+      className="developer-section"
+      ref={developerSectionRef}
+      style={{ zIndex: "800000000" }}
+    >
       <ProjectCard
         title1="A.I & Developer"
         title2="Tools"
@@ -61,7 +65,6 @@ const DeveloperSection = () => {
         height={height}
         width={width}
         position={position}
-        link={"/newpage"}
       />
     </section>
   );

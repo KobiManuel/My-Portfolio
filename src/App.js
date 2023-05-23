@@ -3,10 +3,7 @@ import "./App.css";
 import MainPage from "./Pages/MainPage/Main";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PortfolioContext } from "./Context/context";
-import DeveloperSection from "./Components/DeveloperSection/Main";
-// import Hero from "./Pages/Hero/Main";
-// import ProjectCard from "./UI/ProjectCard/ProjectCard";
-// import developer from "./assets/developer.png";
+import Hero from "./Components/Hero/Main";
 
 function App() {
   const {
@@ -83,8 +80,8 @@ function App() {
       </div>
       <Router>
         <Routes>
-          <Route path="/" element={<MainPage />} >
-          <Route path="/newpage" element={<DeveloperSection />} />
+          <Route path="/" element={<MainPage />}>
+            <Route path="/newpage/component1" element={<Hero />} />
           </Route>
         </Routes>
       </Router>
