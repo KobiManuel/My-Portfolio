@@ -49,8 +49,6 @@ function App() {
   };
   const containerRef = useRef(null);
 
-
-
   return (
     <div ref={containerRef} className="App">
       <div className="fixed">
@@ -75,15 +73,14 @@ function App() {
           <p>Scroll </p>
           <p></p>
           <p> down</p>
-          
+
           <p>→</p>
         </div>
       </div>
       <Router>
         <Routes>
-          <Route path="/" element={<MainPage />}>
+          <Route path="/" element={<MainPage />}  />
             <Route path="/newpage/component1" element={<Hero />} />
-          </Route>
         </Routes>
       </Router>
     </div>
@@ -91,54 +88,3 @@ function App() {
 }
 
 export default App;
-
-
-  // const pageComponents = [<Hero />, <ProjectCard
-  //   title1= "A.I &"
-  //   title2= "Developer Tools"
-  //   description= "Fullstack development"
-  //   Image={developer}
-  // />, <Hero />, <Hero />];
-
-
-
-
-
-
-  // useEffect(() => {
-  //   const container = containerRef.current;
-
-  //   const handleMouseMove = (event) => {
-  //     const { clientX, clientY } = event;
-  //     const offsetX = (clientX / window.innerWidth) * 5;
-  //     const offsetY = (clientY / window.innerHeight) * 20;
-
-  //     container.style.setProperty(
-  //       "background-position",
-  //       `calc(100% - ${offsetX}px) calc(50% + ${offsetY}px)`
-  //     );
-  //   };
-
-  //   container.addEventListener("mousemove", handleMouseMove);
-
-  //   return () => {
-  //     container.removeEventListener("mousemove", handleMouseMove);
-  //   };
-  // }, []);
-
-  // const handleScroll = () => {
-  //   const container = containerRef.current;
-  //   const scrollTop = container.scrollTop;
-  //   const componentHeight = container.clientHeight;
-
-  //   const index = Math.floor(scrollTop / componentHeight);
-  //   setActiveIndex(index);
-  // };
-
-  //  const handleClick = (index) => {
-  //   console.log(index);
-  //   const targetComponent = containerRef.current.querySelectorAll('.page')[index];
-  //   targetComponent.scrollIntoView({ behavior: "smooth", block: "start" });
-  //   setActiveIndex(index);
-  //   console.log(activeIndex)
-  // };
