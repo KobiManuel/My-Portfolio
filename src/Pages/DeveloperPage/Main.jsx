@@ -7,7 +7,7 @@ const DeveloperPage = () => {
   const [hovered, setHovered] = useState(false);
 
   const buttonStyle = {
-    backgroundColor: isHovered && "blue",
+    backgroundColor: isHovered && "",
   };
 
   const handlePageLoad = () => {
@@ -19,9 +19,9 @@ const DeveloperPage = () => {
     }, 10);
      setTimeout(() => {
        page.style.position = "absolute";
-        page.style.width = "90vw";
        page.style.right = "0";
-       enlarge.style.width = "70%";
+        page.style.width = "90vw";
+    //    enlarge.style.width = "70%";
      }, 800);
   }
 
