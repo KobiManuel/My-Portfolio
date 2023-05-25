@@ -1,71 +1,73 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import developer from "../../Components/DeveloperSection/images/A.I.jpg";
-import ProjectCard from "../../UI/ProjectCard/ProjectCard";
-import { PortfolioContext } from "../../Context/context";
+import './_Main.scss'
 
-const DeveloperPage = ({ id }) => {
-  const { setFirstCard } = useContext(PortfolioContext);
-  const [height, setHeight] = useState("");
-  const [width, setWidth] = useState("");
-  const [position, setPosition] = useState("");
-  const developerSectionRef = useRef(null);
+const DeveloperPage = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.8, // Set the threshold to 80%
-    };
-
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setFirstCard(true);
-        } else {
-          setFirstCard(false);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
-    const target = developerSectionRef.current;
-
-    if (target) {
-      observer.observe(target);
-    }
-
-    return () => {
-      if (target) {
-        observer.unobserve(target);
-      }
-    };
-  }, [setFirstCard]);
-
-  const handlePageChange = () => {
-    setHeight("100%");
-    setPosition("absolute");
-    setWidth("70%");
+  const buttonStyle = {
+    backgroundColor: isHovered && "blue",
   };
 
+  const handlePageLoad = () => {
+    const enlarge = document.getElementById("secondDiv");
+    const page = document.querySelector(".developer-page");
+    const card =document.getElementById("card1");
+    setTimeout(() => {
+         enlarge.style.height = "100%";
+    }, 10);
+     setTimeout(() => {
+       page.style.position = "absolute";
+        page.style.width = "90vw";
+       page.style.right = "0";
+       enlarge.style.width = "70%";
+     }, 800);
+  }
+
   return (
-    <section
-      id={id}
-      className="developer-section"
-      ref={developerSectionRef}
-      style={{ zIndex: "800000000" }}
-    >
-      <ProjectCard
-        title1="A.I & Developer"
-        title2="Tools"
-        description="Fullstack development"
-        Image={developer}
-        hoverColor="#012c3a"
-        onClick={handlePageChange}
-        height={height}
-        width={width}
-        position={position}
-      />
+    <section style={{position: "relative"}}>
+      <div className="developer-page">
+        <div id="card1" className="project-card visible">
+          <span>
+            <h3>A.I & Developer</h3>
+            <h3>Tools</h3>
+          </span>
+          <span></span>
+
+          <p>Web</p>
+          <a
+            href="/"
+            style={buttonStyle}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            Visit site
+          </a>
+        </div>
+        <div
+          id="secondDiv"
+          className="project-card visible"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          onLoad={handlePageLoad}
+        >
+          <img
+            src={developer}
+            className="image visible"
+            alt="project background"
+          />
+          {hovered && (
+            <>
+              <div className="ripple-1"></div>
+              <div className="ripple-2"></div>
+              <div className="ripple-3"></div>
+              <div className="ripple-4"></div>
+              <div className="ripple-5"></div>
+            </>
+          )}
+        </div>
+      </div>
     </section>
   );
 };

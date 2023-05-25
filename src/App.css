@@ -27,7 +27,8 @@
 }
 .fixed {
   position: fixed;
-  width: 100px;
+  width: 128px;
+  min-width: 128px;
   height: 100vh;
   display: flex;
   flex-direction: column;
