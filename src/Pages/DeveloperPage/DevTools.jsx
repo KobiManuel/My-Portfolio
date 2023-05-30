@@ -46,7 +46,7 @@ const DeveloperPage = () => {
  
 
   return (
-    <section className="dev-tools"ref={devToolsRef} >
+    <section className="dev-tools" ref={devToolsRef}>
       <div className="fixed">
         {cardValues.map((card, index) => (
           <button
@@ -74,8 +74,13 @@ const DeveloperPage = () => {
           <p>→</p>
         </div>
       </div>
-      <PageHeader />
+
       <div className="devtool-pages">
+        <PageHeader
+          title1={"A.I & Developer"}
+          title2={"Tools"}
+          stack={"Artificial Intelligence & Developer tools"}
+        />
         <ProjectCard
           title1="Design & Art"
           title2="Portfolio"

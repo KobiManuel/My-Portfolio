@@ -3,7 +3,7 @@ import './_PageHeader.scss'
 import arrow from './images/angle-double-left.png'
 import { useLocation, useNavigate } from 'react-router';
 import developer from '../../Components/DeveloperSection/images/A.I.jpg'
-const PageHeader = () => {
+const PageHeader = ({title1, title2, stack}) => {
     const [isHovered, setIsHovered] = useState(false);
     const [hovered, setHovered] = useState(false);
     const navigate = useNavigate();
@@ -55,12 +55,12 @@ const PageHeader = () => {
       <div className="developer-page">
         <div id="card1" className="project-card visible">
           <span>
-            <h3>A.I & Developer</h3>
-            <h3>Tools</h3>
+            <h3>{title1}</h3>
+            <h3>{title2}</h3>
           </span>
           <span></span>
 
-          <p>Web</p>
+          <p>{stack}</p>
 
           <a
             id="devtoolsBtn"
