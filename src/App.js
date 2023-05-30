@@ -2,7 +2,7 @@
 import "./App.css";
 import MainPage from "./Pages/MainPage/Main";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import DeveloperPage from "./Pages/DeveloperPage/Main";
+import DeveloperPage from "./Pages/DeveloperPage/DevTools";
 
 function App() {
   return (

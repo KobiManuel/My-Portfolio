@@ -13,8 +13,6 @@
   justify-self: center;
   align-self: center;
   position: relative;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
   scroll-snap-align: start;
   
 
@@ -106,6 +104,10 @@
       border-radius: 10px;
       &:hover {
         transform: translateY(-5px);
+      }
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }
@@ -203,4 +205,10 @@
       width: 100%;
     }
     }
+}
+
+.developer-page_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
