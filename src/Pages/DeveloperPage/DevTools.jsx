@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import developer from "../../Components/DeveloperSection/images/A.I.jpg";
 import "./_Main.scss";
-import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 import { useLocation } from "react-router";
 
 const DeveloperPage = () => {
@@ -24,7 +23,6 @@ const DeveloperPage = () => {
       page.style.position = "absolute";
       page.style.right = "0";
       page.style.width = "90vw";
-      //    enlarge.style.width = "70%";
     }, 800);
   };
 
