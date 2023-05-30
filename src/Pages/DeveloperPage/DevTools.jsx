@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import developer from "../../Components/DeveloperSection/images/A.I.jpg";
 import "./_Main.scss";
 import { useLocation } from "react-router";
+import arrow from "./images/angle-double-left.png";
 
 const DeveloperPage = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -28,9 +29,15 @@ const DeveloperPage = () => {
 
   useEffect(() => {
     const btn = document.getElementById("devtoolsBtn");
+    const returnPgae = document.querySelector(".backward-arrow");
     if (pathName === "/developerPage") {
       btn.style.animation = "materializeAnimation 1s forwards";
+      setTimeout(() => {
+        returnPgae.style.transform = "translateX(0)";
+        returnPgae.style.opacity = "1";
+      }, 400);
     }
+        
     return () => {
       btn.style.animation = "";
     };
@@ -39,6 +46,7 @@ const DeveloperPage = () => {
   return (
     <section>
       <div className="developer-page_container">
+        <img className="backward-arrow" src={arrow} alt="arrow-icon" />
         <div className="developer-page">
           <div id="card1" className="project-card visible">
             <span>
@@ -48,6 +56,7 @@ const DeveloperPage = () => {
             <span></span>
 
             <p>Web</p>
+
             <a
               id="devtoolsBtn"
               href="/"
