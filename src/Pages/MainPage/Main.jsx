@@ -69,7 +69,8 @@ const MainPage = () => {
             width: "fit-content",
             height: "fit-content",
             transform: fifthCard && "rotate(90deg) translateX(200%)",
-            transition: "transform 0.7s ease",
+            opacity: fifthCard && "0",
+            transition: "all 0.7s ease",
           }}
         >
           <p>Scroll </p>

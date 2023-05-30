@@ -30,17 +30,22 @@ const DeveloperPage = () => {
 
   useEffect(() => {
     const btn = document.getElementById("devtoolsBtn");
-    const returnPgae = document.querySelector(".backward-arrow");
+    const handleAnimationEnd = () => {
+      btn.style.visibility = "hidden";
+    };
+    btn.addEventListener("animationend", handleAnimationEnd);
+    const returnPage = document.querySelector(".backward-arrow");
     if (pathName === "/developerPage") {
       btn.style.animation = "materializeAnimation 1s forwards";
       setTimeout(() => {
-        returnPgae.style.transform = "translateX(0)";
-        returnPgae.style.opacity = "1";
+        returnPage.style.transform = "translateX(0)";
+        returnPage.style.opacity = "1";
       }, 400);
     }
-        
+
     return () => {
       btn.style.animation = "";
+      btn.removeEventListener("animationend", handleAnimationEnd);
     };
   }, []);
 
