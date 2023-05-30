@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import developer from "../../Components/DeveloperSection/images/A.I.jpg";
 import "./_Main.scss";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import arrow from "./images/angle-double-left.png";
 
 const DeveloperPage = () => {
@@ -9,6 +9,7 @@ const DeveloperPage = () => {
   const [hovered, setHovered] = useState(false);
   const location = useLocation();
   const pathName = location.pathname;
+  const navigate = useNavigate();
 
   const buttonStyle = {
     backgroundColor: isHovered && "",
@@ -46,7 +47,9 @@ const DeveloperPage = () => {
   return (
     <section>
       <div className="developer-page_container">
-        <img className="backward-arrow" src={arrow} alt="arrow-icon" />
+        <button className="backward-arrow" onClick={() => navigate(-1)}>
+          <img src={arrow} alt="arrow-icon" />
+        </button>
         <div className="developer-page">
           <div id="card1" className="project-card visible">
             <span>
