@@ -1,3 +1,38 @@
+.dev-tools {
+  overflow-y: scroll;
+   scroll-snap-type: y mandatory !important;
+   height: 100vh;
+   overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge
+   */
+   &::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+.developer-page_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start !important;
+  .backward-arrow {
+    position: absolute;
+    left: 40px;
+    top: 25px;
+    width: 60px;
+    cursor: pointer;
+    transition: all 0.7s ease-in;
+    opacity: 0;
+    transform: translateX(20px);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    img {
+        width: 60px;
+    }
+    &:hover {
+        transform: translateX(-20px) !important;
+    }
+  }
 .developer-page {
   width: fit-content;
   display: flex;
@@ -140,7 +175,9 @@
   }
 
 }
+}
 
+}
 
 .ripple-1,
 .ripple-2,
@@ -207,10 +244,12 @@
     }
 }
 
+
 .developer-page_container {
   position: relative;
   width: 100vw;
   height: 100vh;
+  scroll-snap-align: start !important;
   .backward-arrow {
     position: absolute;
     left: 40px;

@@ -3,6 +3,7 @@ import developer from "../../Components/DeveloperSection/images/A.I.jpg";
 import "./_Main.scss";
 import { useLocation, useNavigate } from "react-router";
 import arrow from "./images/angle-double-left.png";
+import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 
 const DeveloperPage = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -50,7 +51,7 @@ const DeveloperPage = () => {
   }, []);
 
   return (
-    <section>
+    <section className="dev-tools">
       <div className="developer-page_container">
         <button className="backward-arrow" onClick={() => navigate(-1)}>
           <img src={arrow} alt="arrow-icon" />
@@ -100,10 +101,27 @@ const DeveloperPage = () => {
         </div>
       </div>
       <div>
-        <h1> bunch of text </h1>
-        <h1> bunch of text </h1>
-        <h1> bunch of text </h1>
-        <h1> bunch of text </h1>
+      <ProjectCard
+        title1="Design & Art"
+        title2="Portfolio"
+        description="Visual Design"
+        Image={developer}
+        hoverColor="#012c5a"
+      />
+      <ProjectCard
+        title1="Design & Art"
+        title2="Portfolio"
+        description="Visual Design"
+        Image={developer}
+        hoverColor="#012c5a"
+      />
+      <ProjectCard
+        title1="Design & Art"
+        title2="Portfolio"
+        description="Visual Design"
+        Image={developer}
+        hoverColor="#012c5a"
+      />
       </div>
     </section>
   );
