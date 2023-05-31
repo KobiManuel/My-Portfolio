@@ -52,7 +52,8 @@ const SynthSpeak = ({ id }) => {
         description="Fullstack development"
         Image={codex}
         hoverColor="#012c3a"
-        link={""}
+        link={"/"}
+        homepage={false}
       />
     </section>
   );

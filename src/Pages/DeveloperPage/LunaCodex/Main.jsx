@@ -52,9 +52,8 @@ const LunaCodex = ({ id }) => {
         description="Fullstack development"
         Image={codex}
         hoverColor="#012c3a"
-        link={
-          "https://cuseum.com/blog/22/6/1/top-technology-trends-in-2022-and-what-they-mean-for-associations-membership-organizations"
-        }
+        link={"/"}
+        homepage={false}
       />
     </section>
   );
