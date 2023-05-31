@@ -75,30 +75,3 @@
     }
     }
 }
-
-
-.developer-page_container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start !important;
-  .backward-arrow {
-    position: absolute;
-    left: 40px;
-    top: 25px;
-    width: 60px;
-    cursor: pointer;
-    transition: all 0.7s ease-in;
-    opacity: 0;
-    transform: translateX(20px);
-    border: none;
-    outline: none;
-    background-color: transparent;
-    img {
-        width: 60px;
-    }
-    &:hover {
-        transform: translateX(-20px) !important;
-    }
-  }
-}
