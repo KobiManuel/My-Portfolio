@@ -1,10 +1,6 @@
 import React, { useContext, useRef } from "react";
-import "./_DevTools.scss";
 import { PortfolioContext } from "../../Context/context";
-import LunaCodex from "./LunaCodex/Main";
 import Hero from "./Hero/Main";
-import SynthSpeak from "./SynthSpeak/Main";
-import SvgConverter from "./SvgConverter/Main";
 
 const FrontendPage = () => {
   const {
