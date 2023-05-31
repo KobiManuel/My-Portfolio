@@ -33,7 +33,7 @@ const PageHeader = ({title1, title2, stack, banner}) => {
 
      const handlePageLoad = () => {
        const enlarge = document.getElementById("secondDiv");
-       const page = document.querySelector(".developer-page");
+       const page = document.querySelector(".page-header");
        setTimeout(() => {
          enlarge.style.height = "100%";
        }, 10);
@@ -44,11 +44,11 @@ const PageHeader = ({title1, title2, stack, banner}) => {
        }, 800);
      };
   return (
-    <div className="developer-page_container">
+    <div className="page-header_container">
       <button className="backward-arrow" onClick={() => navigate(-1)}>
         <img src={arrow} alt="arrow-icon" />
       </button>
-      <div className="developer-page">
+      <div className="page-header">
         <div id="card1" className="project-card visible">
           <span>
             <h3>{title1}</h3>

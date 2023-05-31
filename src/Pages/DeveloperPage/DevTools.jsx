@@ -1,51 +1,35 @@
 import React, { useContext, useRef } from "react";
-import developer from "../../Components/DeveloperSection/images/AI post blog.jpg";
 import "./_DevTools.scss";
-import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 import { PortfolioContext } from "../../Context/context";
-import PageHeader from "../../UI/PageHeader/PageHeader";
 import LunaCodex from "./LunaCodex/Main";
 import Hero from "./Hero/Main";
+import SynthSpeak from "./SynthSpeak/Main";
 
 const DeveloperPage = () => {
-   const {
-     heroCard,
-     firstCard,
-     secondCard,
-     thirdCard,
-     setFirstCard,
-     setSecondCard,
-     setThirdCard,
-     setHeroCard,
-   } = useContext(PortfolioContext);
-   const cardValues = [
-     heroCard,
-     firstCard,
-     secondCard,
-     thirdCard,
-   ];
-   const cardSetters = [
-     setHeroCard,
-     setFirstCard,
-     setSecondCard,
-     setThirdCard,
-   ];
+  const {
+    heroCard,
+    firstCard,
+    secondCard,
+    thirdCard,
+    setFirstCard,
+    setSecondCard,
+    setThirdCard,
+    setHeroCard,
+  } = useContext(PortfolioContext);
+  const cardValues = [heroCard, firstCard, secondCard, thirdCard];
+  const cardSetters = [setHeroCard, setFirstCard, setSecondCard, setThirdCard];
 
-   const handleCardClick = (index) => {
-     cardSetters.forEach((setter, i) => {
-       setter(i === index);
-     });
-     const pagesContainer =
-       devToolsRef.current.querySelector(".devtool-pages");
-     const component = pagesContainer.children[index-1];
-     if (component) {
-       component.scrollIntoView({ behavior: "smooth", block: "start" });
-     }
-   };
-   const devToolsRef = useRef(null);
-
-
- 
+  const handleCardClick = (index) => {
+    cardSetters.forEach((setter, i) => {
+      setter(i === index);
+    });
+    const pagesContainer = devToolsRef.current.querySelector(".devtool-pages");
+    const component = pagesContainer.children[index - 1];
+    if (component) {
+      component.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+  const devToolsRef = useRef(null);
 
   return (
     <section className="dev-tools" ref={devToolsRef}>
@@ -79,21 +63,8 @@ const DeveloperPage = () => {
 
       <div className="devtool-pages">
         <Hero />
-       <LunaCodex />
-        <ProjectCard
-          title1="Design & Art"
-          title2="Portfolio"
-          description="Visual Design"
-          Image={developer}
-          hoverColor="#012c5a"
-        />
-        <ProjectCard
-          title1="Design & Art"
-          title2="Portfolio"
-          description="Visual Design"
-          Image={developer}
-          hoverColor="#012c5a"
-        />
+        <LunaCodex />
+        <SynthSpeak />
       </div>
     </section>
   );

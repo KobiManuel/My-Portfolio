@@ -1,4 +1,4 @@
-.developer-page_container {
+.page-header_container {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -23,7 +23,7 @@
         transform: translateX(-20px) !important;
     }
   }
-.developer-page {
+.page-header {
   width: fit-content;
   display: flex;
   justify-content: flex-end;

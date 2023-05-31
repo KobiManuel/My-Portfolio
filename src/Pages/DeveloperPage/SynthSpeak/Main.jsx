@@ -4,8 +4,8 @@ import codex from "../../../Components/DeveloperSection/images/A.I.jpg";
 import ProjectCard from "../../../UI/ProjectCard/ProjectCard";
 
 const SynthSpeak = ({ id }) => {
-  const { setFirstCard } = useContext(PortfolioContext);
-  const developerSectionRef = useRef(null);
+  const { setSecondCard } = useContext(PortfolioContext);
+  const synthSpeakRef = useRef(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -15,9 +15,9 @@ const SynthSpeak = ({ id }) => {
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setFirstCard(true);
+          setSecondCard(true);
         } else {
-          setFirstCard(false);
+          setSecondCard(false);
         }
       });
     };
@@ -26,7 +26,7 @@ const SynthSpeak = ({ id }) => {
       observerCallback,
       observerOptions
     );
-    const target = developerSectionRef.current;
+    const target = synthSpeakRef.current;
 
     if (target) {
       observer.observe(target);
@@ -37,24 +37,22 @@ const SynthSpeak = ({ id }) => {
         observer.unobserve(target);
       }
     };
-  }, [setFirstCard]);
+  }, [setSecondCard]);
 
   return (
     <section
       id={id}
-      className="developer-section"
-      ref={developerSectionRef}
+      className="synthspeak-section"
+      ref={synthSpeakRef}
       style={{ zIndex: "800000000" }}
     >
       <ProjectCard
-        title1="L.U.N.A"
-        title2="Neural Assistant"
+        title1="SynthSpeak"
+        title2="Article Summarizer"
         description="Fullstack development"
         Image={codex}
         hoverColor="#012c3a"
-        link={
-          "https://cuseum.com/blog/22/6/1/top-technology-trends-in-2022-and-what-they-mean-for-associations-membership-organizations"
-        }
+        link={""}
       />
     </section>
   );

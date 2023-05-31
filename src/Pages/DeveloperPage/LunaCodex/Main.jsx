@@ -5,7 +5,7 @@ import ProjectCard from "../../../UI/ProjectCard/ProjectCard";
 
 const LunaCodex = ({ id }) => {
   const { setFirstCard } = useContext(PortfolioContext);
-  const developerSectionRef = useRef(null);
+  const lunaCodexRef = useRef(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -26,7 +26,7 @@ const LunaCodex = ({ id }) => {
       observerCallback,
       observerOptions
     );
-    const target = developerSectionRef.current;
+    const target = lunaCodexRef.current;
 
     if (target) {
       observer.observe(target);
@@ -42,8 +42,8 @@ const LunaCodex = ({ id }) => {
   return (
     <section
       id={id}
-      className="developer-section"
-      ref={developerSectionRef}
+      className="lunaCodex"
+      ref={lunaCodexRef}
       style={{ zIndex: "800000000" }}
     >
       <ProjectCard

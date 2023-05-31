@@ -42,7 +42,7 @@ const Hero = ({ id }) => {
   return (
     <section
       id={id}
-      className="developer-section"
+      className="developer-page"
       ref={DevtoolsRef}
       style={{ zIndex: "800000000" }}
     >
