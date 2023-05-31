@@ -4,6 +4,7 @@ import "./_DevTools.scss";
 import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 import { PortfolioContext } from "../../Context/context";
 import PageHeader from "../../UI/PageHeader/PageHeader";
+import LunaCodex from "./LunaCodex/Main";
 
 const DeveloperPage = () => {
    const {
@@ -82,13 +83,7 @@ const DeveloperPage = () => {
           stack={"Artificial Intelligence & Developer tools"}
           banner={developer}
         />
-        <ProjectCard
-          title1="Design & Art"
-          title2="Portfolio"
-          description="Visual Design"
-          Image={developer}
-          hoverColor="#012c5a"
-        />
+       <LunaCodex />
         <ProjectCard
           title1="Design & Art"
           title2="Portfolio"
