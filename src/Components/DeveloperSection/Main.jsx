@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import ProjectCard from "../../UI/ProjectCard/ProjectCard";
-import developer from "./images/A.I.jpg";
+import developer from "./images/AI post blog.jpg";
 import { PortfolioContext } from "../../Context/context";
 
 const DeveloperSection = ({id}) => {

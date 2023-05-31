@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './_PageHeader.scss'
 import arrow from './images/angle-double-left.png'
 import { useNavigate } from 'react-router';
-import developer from '../../Components/DeveloperSection/images/A.I.jpg'
-const PageHeader = ({title1, title2, stack}) => {
+const PageHeader = ({title1, title2, stack, banner}) => {
     const [isHovered, setIsHovered] = useState(false);
     const [hovered, setHovered] = useState(false);
     const navigate = useNavigate();
@@ -77,7 +76,7 @@ const PageHeader = ({title1, title2, stack}) => {
           onLoad={handlePageLoad}
         >
           <img
-            src={developer}
+            src={banner}
             className="image visible"
             alt="project background"
           />

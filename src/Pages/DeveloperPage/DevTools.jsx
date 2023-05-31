@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from "react";
-import developer from "../../Components/DeveloperSection/images/A.I.jpg";
+import developer from "../../Components/DeveloperSection/images/AI post blog.jpg";
 import "./_DevTools.scss";
 import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 import { PortfolioContext } from "../../Context/context";
@@ -80,6 +80,7 @@ const DeveloperPage = () => {
           title1={"A.I & Developer"}
           title2={"Tools"}
           stack={"Artificial Intelligence & Developer tools"}
+          banner={developer}
         />
         <ProjectCard
           title1="Design & Art"
