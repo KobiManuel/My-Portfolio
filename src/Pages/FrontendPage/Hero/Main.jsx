@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { PortfolioContext } from "../../../Context/context";
-import banner from "../../../Components/FrontendSection/images/banner.jpg";
+import banner from "../../../Components/FrontendSection/images/banner3.jpg";
 import PageHeader from "../../../UI/PageHeader/PageHeader";
 
 const Hero = ({ id }) => {
