@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from "react";
 import developer from "../../Components/DeveloperSection/images/A.I.jpg";
-import "./_Main.scss";
+import "./_DevTools.scss";
 import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 import { PortfolioContext } from "../../Context/context";
 import PageHeader from "../../UI/PageHeader/PageHeader";

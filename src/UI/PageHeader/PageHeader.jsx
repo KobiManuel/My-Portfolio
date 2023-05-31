@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './_PageHeader.scss'
 import arrow from './images/angle-double-left.png'
-import { useLocation, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import developer from '../../Components/DeveloperSection/images/A.I.jpg'
 const PageHeader = ({title1, title2, stack}) => {
     const [isHovered, setIsHovered] = useState(false);
     const [hovered, setHovered] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation();
-    const pathName = location.pathname;
     const buttonStyle = {
       backgroundColor: isHovered && "",
     };
@@ -21,13 +19,12 @@ const PageHeader = ({title1, title2, stack}) => {
    };
    btn.addEventListener("animationend", handleAnimationEnd);
    const returnPage = document.querySelector(".backward-arrow");
-   if (pathName === "/developerPage") {
      btn.style.animation = "materializeAnimation 1s forwards";
      setTimeout(() => {
        returnPage.style.transform = "translateX(0)";
        returnPage.style.opacity = "1";
      }, 400);
-   }
+
 
    return () => {
      btn.style.animation = "";
