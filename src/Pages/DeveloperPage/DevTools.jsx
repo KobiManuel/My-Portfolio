@@ -5,6 +5,7 @@ import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 import { PortfolioContext } from "../../Context/context";
 import PageHeader from "../../UI/PageHeader/PageHeader";
 import LunaCodex from "./LunaCodex/Main";
+import Hero from "./Hero/Main";
 
 const DeveloperPage = () => {
    const {
@@ -77,12 +78,7 @@ const DeveloperPage = () => {
       </div>
 
       <div className="devtool-pages">
-        <PageHeader
-          title1={"A.I & Developer"}
-          title2={"Tools"}
-          stack={"Artificial Intelligence & Developer tools"}
-          banner={developer}
-        />
+        <Hero />
        <LunaCodex />
         <ProjectCard
           title1="Design & Art"

@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { PortfolioContext } from "../../../Context/context";
-import codex from "../../../Components/DeveloperSection/images/A.I.jpg";
-import ProjectCard from "../../../UI/ProjectCard/ProjectCard";
+import banner from './images/AI post blog.jpg';
+import PageHeader from "../../../UI/PageHeader/PageHeader";
 
-const LunaCodex = ({ id }) => {
-  const { setFirstCard } = useContext(PortfolioContext);
-  const developerSectionRef = useRef(null);
+const Hero = ({ id }) => {
+  const { setHeroCard } = useContext(PortfolioContext);
+  const DevtoolsRef = useRef(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -15,9 +15,9 @@ const LunaCodex = ({ id }) => {
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setFirstCard(true);
+          setHeroCard(true);
         } else {
-          setFirstCard(false);
+          setHeroCard(false);
         }
       });
     };
@@ -26,7 +26,7 @@ const LunaCodex = ({ id }) => {
       observerCallback,
       observerOptions
     );
-    const target = developerSectionRef.current;
+    const target = DevtoolsRef.current;
 
     if (target) {
       observer.observe(target);
@@ -37,27 +37,23 @@ const LunaCodex = ({ id }) => {
         observer.unobserve(target);
       }
     };
-  }, [setFirstCard]);
+  }, [setHeroCard]);
 
   return (
     <section
       id={id}
       className="developer-section"
-      ref={developerSectionRef}
+      ref={DevtoolsRef}
       style={{ zIndex: "800000000" }}
     >
-      <ProjectCard
-        title1="L.U.N.A"
-        title2="Neural Assistant"
-        description="Fullstack development"
-        Image={codex}
-        hoverColor="#012c3a"
-        link={
-          "https://cuseum.com/blog/22/6/1/top-technology-trends-in-2022-and-what-they-mean-for-associations-membership-organizations"
-        }
+      <PageHeader
+        title1={"A.I & Developer"}
+        title2={"Tools"}
+        stack={"Artificial Intelligence & Developer tools"}
+        banner={banner}
       />
     </section>
   );
 };
 
-export default LunaCodex;
+export default Hero;
