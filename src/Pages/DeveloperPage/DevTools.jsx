@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import "./_DevTools.scss";
 import { PortfolioContext } from "../../Context/context";
 import LunaCodex from "./LunaCodex/Main";
@@ -14,20 +14,13 @@ const DeveloperPage = () => {
     thirdCard,
     setFirstCard,
     setSecondCard,
-    
+
     setThirdCard,
     setHeroCard,
   } = useContext(PortfolioContext);
   const cardValues = [heroCard, firstCard, secondCard, thirdCard];
   const cardSetters = [setHeroCard, setFirstCard, setSecondCard, setThirdCard];
 
-  useEffect(() => {
-    const fixedDiv = document.querySelector(".fixed");
-    fixedDiv.style.transform = "translateX(-128px)";
-    setTimeout(() => {
-      fixedDiv.style.transform = "translateX(0)";
-    }, 100);
-  }, []);
 
   const handleCardClick = (index) => {
     cardSetters.forEach((setter, i) => {

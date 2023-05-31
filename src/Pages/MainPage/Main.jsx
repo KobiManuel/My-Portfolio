@@ -7,8 +7,11 @@ import './_Main.scss';
 import AboutMe from '../../Components/AboutMe/Main'
 import ContactMe from '../../Components/ContactMe/Main'
 import { PortfolioContext } from '../../Context/context';
+import { useLocation } from 'react-router';
 
 const MainPage = () => {
+  const location = useLocation();
+  const pathname = location.pathname;
     const {
       heroCard,
       firstCard,
@@ -41,9 +44,11 @@ const MainPage = () => {
     ];
 
     useEffect(() => {
-       const fixedDiv = document.querySelector(".fixed");
-       fixedDiv.style.transform = "translateX(0)";
-    }, [])
+      if (pathname === "/") {
+          const fixedDiv = document.querySelector(".fixed");
+          fixedDiv.style.transform = "translateX(0)";
+      }
+    }, [pathname])
     
 
     const handleCardClick = (index) => {
