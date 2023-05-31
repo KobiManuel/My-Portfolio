@@ -65,7 +65,7 @@ const DeveloperSection = ({id}) => {
         height={height}
         width={width}
         position={position}
-        link={"/developerPage"}
+        link={"/projects/developer"}
       />
     </section>
   );
