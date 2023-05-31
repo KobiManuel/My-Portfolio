@@ -38,6 +38,8 @@
   cursor: pointer;
   left: 0;
   z-index: 7000;
+  transition: all 0.7s ease-in-out;
+  transform: translateX(-128px);
 }
 .fixed div {
   transform: rotate(90deg);

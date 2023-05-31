@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import Hero from '../../Components/Hero/Main'
 import DeveloperSection from '../../Components/DeveloperSection/Main'
 import FrontendSection from '../../Components/FrontendSection/Main'
@@ -39,6 +39,12 @@ const MainPage = () => {
       setFourthCard,
       setFifthCard,
     ];
+
+    useEffect(() => {
+       const fixedDiv = document.querySelector(".fixed");
+       fixedDiv.style.transform = "translateX(0)";
+    }, [])
+    
 
     const handleCardClick = (index) => {
       cardSetters.forEach((setter, i) => {
