@@ -4,6 +4,7 @@ import { PortfolioContext } from "../../Context/context";
 import LunaCodex from "./LunaCodex/Main";
 import Hero from "./Hero/Main";
 import SynthSpeak from "./SynthSpeak/Main";
+import SvgConverter from "./SvgConverter/Main";
 
 const DeveloperPage = () => {
   const {
@@ -24,7 +25,7 @@ const DeveloperPage = () => {
       setter(i === index);
     });
     const pagesContainer = devToolsRef.current.querySelector(".devtool-pages");
-    const component = pagesContainer.children[index - 1];
+    const component = pagesContainer.children[index];
     if (component) {
       component.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -65,6 +66,7 @@ const DeveloperPage = () => {
         <Hero />
         <LunaCodex />
         <SynthSpeak />
+        <SvgConverter />
       </div>
     </section>
   );
