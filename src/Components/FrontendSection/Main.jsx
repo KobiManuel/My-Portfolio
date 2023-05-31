@@ -46,6 +46,7 @@ const FrontendSection = () => {
         description="Frontend development"
         Image={banner}
         hoverColor="#012c5a"
+        link={"/projects/frontend"}
       />
     </section>
   );
