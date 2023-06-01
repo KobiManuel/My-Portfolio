@@ -19,7 +19,7 @@ function App() {
           <Route path="/aboutMe" element={<AboutMe />} />
         </Routes>
       </Router>
-    </div>s
+    </div>
   );
 }
 

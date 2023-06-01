@@ -15,7 +15,12 @@
   overflow-y: hidden !important;
   scroll-snap-align: start;
   
-
+.email-text {
+  cursor: pointer;
+  &:hover {
+    color: #ee5258;
+  }
+}
   .project-card {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
