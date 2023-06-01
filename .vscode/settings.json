@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "User Interface",
-        "New Component"
+        "New Component",
+        "New Import"
     ]
 }

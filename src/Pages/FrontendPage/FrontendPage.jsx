@@ -3,6 +3,7 @@ import { PortfolioContext } from "../../Context/context";
 import Hero from "./Hero/Main";
 import AwaDigital from "./AwaDigital/Main";
 import './_FrontendPage.scss'
+import SapaAdmin from "./SapaAdmin/Main";
 
 const FrontendPage = () => {
   const {
@@ -64,6 +65,7 @@ const FrontendPage = () => {
       <div className="frontend-pages">
         <Hero />
         <AwaDigital />
+        <SapaAdmin />
       </div>
     </section>
   );
