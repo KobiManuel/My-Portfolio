@@ -4,6 +4,7 @@ import Hero from "./Hero/Main";
 import AwaDigital from "./AwaDigital/Main";
 import './_FrontendPage.scss'
 import SapaAdmin from "./SapaAdmin/Main";
+import ReactMeals from "./ReactMeals/Main";
 
 const FrontendPage = () => {
   const {
@@ -66,6 +67,7 @@ const FrontendPage = () => {
         <Hero />
         <AwaDigital />
         <SapaAdmin />
+        <ReactMeals />
       </div>
     </section>
   );
