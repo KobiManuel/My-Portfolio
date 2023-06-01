@@ -1,6 +1,8 @@
 import React, { useContext, useRef } from "react";
 import { PortfolioContext } from "../../Context/context";
 import Hero from "./Hero/Main";
+import AwaDigital from "./AwaDigital/Main";
+import './_FrontendPage.scss'
 
 const FrontendPage = () => {
   const {
@@ -61,6 +63,7 @@ const FrontendPage = () => {
 
       <div className="frontend-pages">
         <Hero />
+        <AwaDigital />
       </div>
     </section>
   );
