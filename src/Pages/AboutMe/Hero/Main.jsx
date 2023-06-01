@@ -6,9 +6,10 @@ const Hero = ({ id }) => {
   return (
     <section id={id} className="aboutMe__hero">
       <PageHeader
-        title1={"Design & Art"}
-        title2={"Portfolio"}
-        stack={"Visual Design & Illustration"}
+        title1={"About Me"}
+        stack={
+          "Evidently Creative and Poetic in a way that seems not to be of this earth"
+        }
         banner={banner}
       />
     </section>
