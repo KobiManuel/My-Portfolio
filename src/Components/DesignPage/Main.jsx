@@ -46,6 +46,7 @@ const DesignPage = () => {
         description="Visual Design"
         Image={banner}
         hoverColor="#012c5a"
+        link={"/projects/artPortfolio"}
       />
     </section>
   );

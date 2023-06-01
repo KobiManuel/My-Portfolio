@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useRef } from "react";
-import { PortfolioContext } from "../../../Context/context";
-import banner from "./images/AI post blog.jpg";
+import React from "react";
+import banner from "../../../Components/DesignPage/images/banner.jpg";
 import PageHeader from "../../../UI/PageHeader/PageHeader";
 
 const Hero = ({ id }) => {
@@ -8,12 +7,11 @@ const Hero = ({ id }) => {
     <section
       id={id}
       className="Design-portfolio__hero"
-      style={{ zIndex: "800000000" }}
     >
       <PageHeader
-        title1={"A.I & Developer"}
-        title2={"Tools"}
-        stack={"Artificial Intelligence & Developer tools"}
+        title1={"Design & Art"}
+        title2={"Portfolio"}
+        stack={"Visual Design & Illustration"}
         banner={banner}
       />
     </section>
