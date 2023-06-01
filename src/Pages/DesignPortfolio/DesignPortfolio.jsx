@@ -7,9 +7,6 @@ const DesignPortfolio = () => {
     <section className="dev-tools" >
       <div className="devtool-pages">
         <Hero />
-        <LunaCodex />
-        <SynthSpeak />
-        <SvgConverter />
       </div>
     </section>
   );
