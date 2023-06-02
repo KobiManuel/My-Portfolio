@@ -13,7 +13,7 @@ const AboutMe = () => {
           <p>→</p>
         </div>
       </div>
-      <div className="devtool-pages">
+      <div className="devtools-pages">
         <Hero />
       </div>
     </section>
